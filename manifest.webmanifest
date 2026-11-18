@@ -1,0 +1,100 @@
+{
+ "name": "Gen Z Studio",
+ "short_name": "Gen Z Studio",
+ "description": "ভয়েস, ক্যাপশন, টেমপ্লেট আর ভিডিও এডিটিং — এক জায়গায়। Gen Z Theology-র নিজের স্টুডিও।",
+ "id": "./",
+ "start_url": "./?source=pwa",
+ "scope": "./",
+ "display": "standalone",
+ "display_override": [
+  "window-controls-overlay",
+  "standalone"
+ ],
+ "orientation": "any",
+ "background_color": "#06080E",
+ "theme_color": "#0D1220",
+ "lang": "bn",
+ "dir": "ltr",
+ "categories": [
+  "productivity",
+  "photo",
+  "education"
+ ],
+ "icons": [
+  {
+   "src": "icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any"
+  },
+  {
+   "src": "icon-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ],
+ "shortcuts": [
+  {
+   "name": "নতুন টেমপ্লেট",
+   "url": "./?do=tpl",
+   "icons": [
+    {
+     "src": "icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  },
+  {
+   "name": "ভয়েস রেকর্ড",
+   "url": "./?do=rec",
+   "icons": [
+    {
+     "src": "icon-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  }
+ ],
+ "file_handlers": [
+  {
+   "action": "./?do=open",
+   "accept": {
+    "application/x-gzstudio": [
+     ".gzstudio"
+    ],
+    "application/json": [
+     ".gztiming"
+    ]
+   }
+  }
+ ],
+ "share_target": {
+  "action": "./?do=share",
+  "method": "POST",
+  "enctype": "multipart/form-data",
+  "params": {
+   "title": "title",
+   "text": "text",
+   "files": [
+    {
+     "name": "media",
+     "accept": [
+      "audio/*",
+      "video/*",
+      "image/*"
+     ]
+    }
+   ]
+  }
+ },
+ "launch_handler": {
+  "client_mode": "focus-existing"
+ }
+}
